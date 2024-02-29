@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Shopping</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .containpop{
+            width: 100%;
+            height: 100vh;
+            background: #4f80e3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+     
+        .popup{
+            width: 400px;
+            background: wheat;
+            border-radius: 6px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%) scale(1);
+            text-align: center;
+            padding: 0 30px 30px;
+            color: #333;
+        }
+
+        .popup img{
+            width: 100px;
+            margin-top: -50px;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .popup h2{
+            font-size: 38px;
+            font-weight: 500;
+            margin: 30px 0 10px;
+        }
+        .popup button{
+            width: 100%;
+            margin-top: 50px;
+            padding: 10px 0;
+            background: #527bee;
+            color: wheat;
+            font-weight: bolder;
+            font-size: 18px;
+            border: 0;
+            outline: none;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body bgcolor="#4f80e3">
+    <a href="index.html"><i class="fa fa-home" style="font-size: 60px;color:wheat; background:#4f80e3"></i></a>
+
+    <div class="containpop">
+        
+        <div class="popup" id="popup">
+            
+            <img src="images\tick.png">
+            <h2>Thank You for Your Feedback</h2>
+            <p>Your Response has been Recorded Sucessfully.</p>
+            <p>We will Reach you soon.</p>
+            <button type="button" onclick="window.open('products.html')">Continue Shopping</button>
+        </div>
+    </div>
+
+</body>
+</html>

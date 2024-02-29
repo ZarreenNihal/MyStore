@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Checkout | NikkuStore</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="style1.css">
+
+</head>
+<body>
+   <div class="container">
+      <section class="checkout-form">
+          <h1 class="headings">Complete Your Order Now</h1>
+          <form method="post" action="">
+              <div class="flex">
+                  <div class="inputBox">
+                      <span>Full Name</span>
+                      <input type="text" placeholder="Enter your name" name="name" required>
+                  </div>
+                  <div class="inputBox">
+                      <span>Mobile</span>
+                      <input type="tel" placeholder="Enter your number" name="number" required>
+                  </div>
+                  <div class="inputBox">
+                      <span>E-mail</span>
+                      <input type="email" placeholder="Enter your email" name="email" required>
+                  </div>
+                  <div class="inputBox">
+                      <span>Address</span>
+                      <input type="text" placeholder="e.g. flat no." name="flat" required>
+                  </div>
+                  <div class="inputBox">
+                      <span>City</span>
+                      <input type="text" placeholder="e.g. mumbai" name="city" required>
+                  </div>
+                  <div class="inputBox">
+                      <span>State</span>
+                      <input type="text" placeholder="e.g. maharashtra" name="state" required>
+                  </div>
+                  <div class="inputBox">
+                      <span>Country</span>
+                      <input type="text" placeholder="e.g. india" name="country" required>
+                  </div>
+                  <div class="inputBox">
+                      <span>Pin code</span>
+                      <input type="text" placeholder="e.g. 123456" name="pin_code" required>
+                  </div>
+              </div>
+              <input type="submit" value="Next &#8594;" id="countdownButton" name="order_btn" class="btn">
+              <div id="countdownText"></div>
+          </form>
+      </section>
+  </div>
+  
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+       const countdownButton = document.getElementById("countdownButton");
+       let isButtonClicked = false;
+   
+       countdownButton.addEventListener("click", function () {
+           if (!isButtonClicked) {
+               isButtonClicked = true; // Disable the button
+               countdownButton.style.display = "none"; // Hide the button
+               let seconds = 10;
+               countdownText.textContent = `You will be redirected in ${seconds} seconds`;
+               const countdownInterval = setInterval(function () {
+                   seconds--;
+                   countdownText.textContent = `Redirecting to Payment Methods in ${seconds} seconds`;
+                   if (seconds <= 0) {
+                       clearInterval(countdownInterval);
+                       countdownText.textContent = "Redirecting...";
+                       setTimeout(function () {
+                           window.location.href = "checkout2.html";
+                       }, 1000);
+                   }
+               }, 1000);
+           }
+       });
+   });
+</script>
+</body>
+</html>
